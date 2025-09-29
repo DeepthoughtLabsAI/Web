@@ -2,7 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-color: #1c1c1e;
-  color: #e0e0e0;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-bg-dark text-text-primary;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .typewriter-text::after {
+    content: '▋';
+    animation: blink 1s step-end infinite;
+    margin-left: 0.2em;
+    @apply text-accent-blue;
+  }
+
+  @keyframes blink {
+    from,
+    to {
+      color: transparent;
+    }
+    50% {
+      @apply text-accent-blue;
+    }
+  }
+
+  .typewriter-text.done::after {
+    content: '';
+    animation: none;
+  }
 }
