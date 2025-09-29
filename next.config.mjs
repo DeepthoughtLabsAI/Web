@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  webpack(config, { isServer }) {
+  webpack(config) {
     // Configure webpack to handle SVG files
     config.module.rules.push({
       test: /\.svg$/,
