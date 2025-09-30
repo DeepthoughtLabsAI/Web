@@ -5,12 +5,16 @@ import FoundationSection from '@/components/FoundationSection';
 import AudiencesSection from '@/components/AudiencesSection';
 import EthosSection from '@/components/EthosSection';
 import ContactSection from '@/components/ContactSection';
+import ProcessDiagram from '@/components/ProcessDiagram';
+import ConvergingIconsAnimation from '@/components/ConvergingIconsAnimation';
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center">
+    <main>
       <Hero />
+      <ConvergingIconsAnimation />
       <ProblemSection />
+      <ProcessDiagram />
       <SolutionSection />
       <FoundationSection />
       <AudiencesSection />
